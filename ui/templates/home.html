@@ -1,0 +1,77 @@
+<!-- ui/templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Synthetic Data Generator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../static/css/styles.css" />
+</head>
+<body>
+  <header class="nav-bar">
+    <div class="nav-left">
+      <div class="logo">🤖</div>
+      <div class="brand">
+        <div class="brand-title">Synthetic Data</div>
+        <div class="brand-sub">Generator</div>
+      </div>
+    </div>
+
+    <nav class="nav-center">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Generate</a>
+      <a href="#" class="nav-link">Evaluate</a>
+      <a href="#" class="nav-link">Docs</a>
+      <a href="#" class="nav-link">About</a>
+    </nav>
+
+    <div class="nav-right">
+      <div class="model-select small">
+        <label><input type="radio" name="model" value="gan" checked /> GAN</label>
+        <label><input type="radio" name="model" value="vae" /> VAE</label>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="panel">
+      <h1 class="title">Quick synthetic sample</h1>
+      <p class="lead">Pick a model, choose how many rows (5–30), then click <strong>Generate</strong>.</p>
+
+      <div class="controls">
+        <label class="control">
+          <span>Rows</span>
+          <input id="rowsInput" type="number" min="5" max="30" value="10" />
+        </label>
+
+        <div class="control">
+          <button id="generateBtn" class="btn primary">Generate</button>
+        </div>
+
+        <div class="control">
+          <div id="status" class="status">Idle</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel results-panel">
+      <h2>Generated Data</h2>
+      <div id="resultsInfo" class="muted">No data yet.</div>
+      <div id="tableWrap" class="table-wrap" hidden>
+        <table id="resultsTable" class="results-table">
+          <thead id="tableHead"></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer-right">© 2025</div>
+  </footer>
+
+  <script src="../static/js/main.js" defer></script>
+</body>
+</html>
