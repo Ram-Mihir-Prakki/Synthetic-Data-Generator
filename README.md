@@ -23,6 +23,9 @@ gh repo clone Ram-Mihir-Prakki/Synthetic-Data-Generator
 1. Download the loan dataset from kaggle : https://www.kaggle.com/datasets/burak3ergun/loan-data-set
 2. Clone the github repo (steps mentioned above)
 3. Rename the downloaded dataset to "loan.csv" and paste it in data directory (already available if cloned)
+4. Create a virtual environment using the below command.
+        python -m venv <name>
+        . .\venv\Scripts\activate (for windows) or .venv/Source/activate (for bash)
 4. Run the below command to install the complete requirements:
         pip install -r requirements.txt
 5. Run the command to start the uvicorn server in your local machine:
